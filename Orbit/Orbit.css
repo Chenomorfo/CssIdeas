@@ -1,0 +1,54 @@
+/* For be centred */
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+/* textBox */
+#manyPlanets{
+    position: absolute;
+    top: 110px;
+    left: 50px;
+    font-size: 30px;
+    width: 100px;
+    background-color: wheat;
+}
+
+h1{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 30px;
+    background-color: wheat;
+}
+
+/* Divs for circle */
+div{
+    border-radius: 200px;
+}
+.Sun{
+    background-color: aqua;
+    width: 100px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100px;
+}
+
+.planet{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: aliceblue;
+    /* transform: translate(190px,-190px); */
+    animation: OriginToHome 1s;
+}
+
+@keyframes OriginToHome {
+    0%{transform: translate(0,0);}
+}
