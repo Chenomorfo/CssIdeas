@@ -1,0 +1,71 @@
+* {
+  background-color: #242424;
+  margin: 30px auto;
+}
+
+@import "mixins";
+
+footer {
+  background-color: white;
+  height: 5px;
+}
+
+.CardList {
+  width: 80%;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 15px;
+
+  div {
+    @include Card;
+    font-size: 4rem;
+    @include flexCenter;
+  }
+}
+
+.Orbit {
+  @include Sun(300px, 3);
+  position: relative;
+  margin: 180px auto;
+  &:hover {
+    .Moon {
+      opacity: 1;
+    }
+  }
+  .Moon {
+    position: absolute;
+    @include Sun(100px, 4);
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+}
+
+.Square {
+  margin: 50px auto;
+  width: 200px;
+  height: 200px;
+  
+  border: 1px solid white;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+  
+  background-image: url("./imgs/006.png");
+  background-size: cover;
+  
+  .Diamond {
+    transition: transform 0.25s ease, scale 0.25s ease, opacity 0.4s ease;
+    transform: rotateZ(-45deg);
+    
+    background-image: url("./imgs/004.png");
+    background-size: cover;
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: rotateZ(45deg);
+    .Diamond {
+      scale: 145%;
+      opacity: 1;
+    }
+  }
+}

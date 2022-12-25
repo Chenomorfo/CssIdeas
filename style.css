@@ -1,0 +1,103 @@
+* {
+  background-color: #242424;
+  margin: 30px auto;
+}
+
+footer {
+  background-color: white;
+  height: 5px;
+}
+
+.CardList {
+  width: 80%;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 15px;
+}
+.CardList div {
+  width: 289.2857142857px;
+  height: 450px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 5px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.CardList div:hover {
+  color: #242424;
+  background-color: white;
+}
+
+.Orbit {
+  width: 300px;
+  height: 300px;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  position: relative;
+  margin: 180px auto;
+}
+.Orbit:hover {
+  color: #242424;
+  background-color: white;
+}
+.Orbit:hover .Moon {
+  opacity: 1;
+}
+.Orbit .Moon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.Orbit .Moon:hover {
+  color: #242424;
+  background-color: white;
+}
+
+.Square {
+  margin: 50px auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid white;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+  background-image: url("./imgs/006.png");
+  background-size: cover;
+}
+.Square .Diamond {
+  transition: transform 0.25s ease, scale 0.25s ease, opacity 0.4s ease;
+  transform: rotateZ(-45deg);
+  background-image: url("./imgs/004.png");
+  background-size: cover;
+  opacity: 0;
+}
+.Square:hover {
+  transform: rotateZ(45deg);
+}
+.Square:hover .Diamond {
+  scale: 145%;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

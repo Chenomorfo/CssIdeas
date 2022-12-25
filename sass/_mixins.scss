@@ -1,0 +1,42 @@
+@mixin Card($size:450px) {
+  $aspectRadio: calc($size/14 * 9);
+  width: $aspectRadio;
+  height: $size;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 5px;
+
+  transition: background-color 0.5s ease, color 0.5s ease;
+  &:hover {
+    color: #242424;
+    background-color: white;
+  }
+}
+
+@mixin Sun($size:300px,$fontSize:7) {
+  width: $size;
+  height: $size;
+
+  border: 3px solid white;
+  border-radius: 50%;
+
+  @include flexCenter;
+  text-align: center;
+
+  font-size: calc($size/$fontSize);
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  &:hover{
+    color: #242424;
+    background-color: white;
+  }
+}
+
+@mixin flexCenter(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
